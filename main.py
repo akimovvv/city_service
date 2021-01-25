@@ -7,7 +7,6 @@
 # deleteByIndex(index) : boolean
 # show() 
 
-
 import example as ex
 
 def main():
