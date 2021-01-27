@@ -1,17 +1,13 @@
-# create (name) : boolean
-# read(index) : name
-# readByName(name) : name[]
-# existsByName (name) : boolean
-# update (oldName, newName) : boolean
-# deleteByName(name) : boolean
-# deleteByIndex(index) : boolean
-# show() 
+
+
 names = []
+
 
 def check_name(name):
 	if len(name) >= 4 and name not in names:
 		return True
 	return False
+
 
 def create_name(name):
 	if check_name(name) == True:
@@ -19,7 +15,6 @@ def create_name(name):
 		print("Sucsess !")
 	else:
 		print("This name also in list or menshe 4 bukv")
-
 
 
 def read_name_by_index():
@@ -33,7 +28,6 @@ def read_name_by_index():
 		print("List is empty input something !")	
 
 
-
 def read_by_name():
 	if len(names) > 0:
 		name = input("Input name to find - ")
@@ -45,7 +39,6 @@ def read_by_name():
 			print("Something went wrong please try agan !")
 	else:
 		print("List is empty input something !")
-
 
 
 def exists_by_name():
@@ -64,7 +57,6 @@ def exists_by_name():
 		print("List is empty input something !")
 
 
-
 def update_name_check(name):
 	if len(names) > 0:
 		if name in names:
@@ -73,6 +65,7 @@ def update_name_check(name):
 	else:
 	 	print("List is empty input something !")
 
+		
 def update_name(name):		
 	if update_name_check(name) == True:
 		name_new = input("Input new name to insert - ")
@@ -89,7 +82,6 @@ def update_name(name):
 		print("Something went wrong please try agan !")
 
 
-
 def delete_by_name():
 	if len(names) > 0:
 		print (names)
@@ -104,7 +96,6 @@ def delete_by_name():
 		print("List is empty input something !")
 
 
-
 def delete_by_index():
 	if len(names) > 0:
 		print (names)
@@ -112,7 +103,6 @@ def delete_by_index():
 		names.pop(delete_index - 1)
 	else:
 		print("List is empty input something !")
-
 
 
 def show_all():
